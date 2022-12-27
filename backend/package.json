@@ -4,13 +4,13 @@
   "description": "",
   "author": "",
   "private": true,
-  "license": "UNLICENSED",
+  "license": "Apache-2.0",
   "config": {
     "migration_path": "./src/database/migration/",
     "mn": "migration"
   },
   "scripts": {
-    "clean": "rm -rf node_modules && rm -rf yarn.lock && rm -rf build && rm -rf dist",
+    "clean": "rm -rf node_modules yarn.lock build dist webapp",
     "prebuild": "rimraf dist",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
@@ -36,6 +36,7 @@
     "@nestjs/mapped-types": "^1.2.0",
     "@nestjs/platform-express": "^9.0.0",
     "@nestjs/platform-socket.io": "^9.2.1",
+    "@nestjs/serve-static": "^3.0.0",
     "@nestjs/typeorm": "^9.0.1",
     "@nestjs/websockets": "^9.2.1",
     "class-transformer": "^0.5.1",

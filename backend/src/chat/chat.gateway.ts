@@ -14,7 +14,7 @@ import MessageToDtoMapper from '../messages/models/mapper/message-to-dto.mapper'
 import Room from '../rooms/models/room.model';
 
 @WebSocketGateway({
-  namespace: 'chat',
+  namespace: '/api/chat',
   cors: {
     origin: '*',
   },

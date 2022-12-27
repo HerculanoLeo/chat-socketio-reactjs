@@ -6,6 +6,8 @@ import UserModule from './users/user.module';
 import RoomModule from './rooms/room.module';
 import MessageModule from './messages/message.module';
 import ChatModule from './chat/chat.module';
+import { ServeStaticModule } from '@nestjs/serve-static';
+import { join } from 'path';
 
 @Module({
   imports: [
@@ -14,6 +16,10 @@ import ChatModule from './chat/chat.module';
       load: [configuration],
     }),
     TypeOrmModule.forRoot(configuration().database),
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..', 'webapp'),
+      serveRoot: '',
+    }),
     ChatModule,
     UserModule,
     RoomModule,
