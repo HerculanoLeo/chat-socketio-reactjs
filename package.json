@@ -4,11 +4,12 @@
   "scripts": {
     "install": "yarn --cwd backend && yarn --cwd frontend",
     "clean": "rm -rf node_modules deploy yarn.lock && yarn --cwd backend clean && yarn --cwd frontend clean ",
+    "build": "yarn --cwd backend build && yarn --cwd frontend build",
+    "deploy": "gulp deploy",
     "local": "gulp set --env=local",
     "dev": "gulp set --env=dev",
-    "build-local": "yarn local && yarn --cwd backend build && yarn --cwd frontend build",
-    "deploy-local": "yarn build-local && yarn deploy",
-    "deploy": "gulp deploy"
+    "build-local": "yarn local && yarn build",
+    "deploy-local": "yarn build-local && yarn deploy"
   },
   "devDependencies": {
     "@types/gulp": "^4.0.10",
