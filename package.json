@@ -3,7 +3,7 @@
   "license": "Apache-2.0",
   "scripts": {
     "install": "yarn --cwd backend && yarn --cwd frontend",
-    "clean": "rm -rf node_modules deploy yarn.lock && yarn --cwd backend clean && yarn --cwd frontend clean ",
+    "clean": "rm -rf node_modules deploy yarn.lock .env && yarn --cwd backend clean && yarn --cwd frontend clean ",
     "build": "yarn --cwd backend build && yarn --cwd frontend build",
     "deploy": "gulp deploy",
     "local": "gulp set --env=local",

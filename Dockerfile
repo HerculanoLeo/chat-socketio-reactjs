@@ -20,5 +20,4 @@ FROM node:18-slim AS deploy
 COPY --from=build /home/build/app/deploy /home/deploy
 EXPOSE 8080
 WORKDIR /home/deploy
-RUN cd . && ls
 ENTRYPOINT ["node", "backend/main.js"]
